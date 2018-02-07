@@ -1,0 +1,30 @@
+(%rsp)
+0x4(%rsp)
+(%rbx)
+%rbx
+
+
+breakpoints:
+
+400fba
+400fc0
+400fd4
+400fe1
+
+Num     Type           Disp Enb Address            What
+1       breakpoint     keep y   0x0000000000400fc7 <phase_2+27>
+2       breakpoint     keep y   0x0000000000400fd8 <phase_2+44>
+	breakpoint already hit 1 time
+3       breakpoint     keep y   0x0000000000400fba <phase_2+14>
+	breakpoint already hit 1 time
+4       breakpoint     keep y   0x0000000000400fc0 <phase_2+20>
+	breakpoint already hit 1 time
+5       breakpoint     keep y   0x0000000000400fd4 <phase_2+40>
+	breakpoint already hit 2 times
+6       breakpoint     keep y   0x0000000000400fe1 <phase_2+53>
+	breakpoint already hit 1 time
+---Type <return> to continue, or q <return> to quit---
+7       breakpoint     keep y   0x0000000000400fce <phase_2+34>
+	breakpoint already hit 2 times
+8       breakpoint     keep y   0x0000000000400fdd <phase_2+49>
+	breakpoint already hit 1 time

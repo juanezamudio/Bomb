@@ -1,0 +1,9 @@
+0000000000400f90 <phase_1>:
+  400f90:	48 83 ec 08          	sub    $0x8,%rsp
+  400f94:	be b0 26 40 00       	mov    $0x4026b0,%esi
+  400f99:	e8 4a 04 00 00       	callq  4013e8 <strings_not_equal>
+  400f9e:	85 c0                	test   %eax,%eax
+  400fa0:	74 05                	je     400fa7 <phase_1+0x17>
+  400fa2:	e8 1a 07 00 00       	callq  4016c1 <explode_bomb>
+  400fa7:	48 83 c4 08          	add    $0x8,%rsp
+  400fab:	c3                   	retq   

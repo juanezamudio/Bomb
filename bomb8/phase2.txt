@@ -1,0 +1,28 @@
+0000000000400fac <phase_2>:
+  400fac:	55                   	push   %rbp
+  400fad:	53                   	push   %rbx
+  400fae:	48 83 ec 28          	sub    $0x28,%rsp
+  400fb2:	48 89 e6             	mov    %rsp,%rsi
+  400fb5:	e8 3d 07 00 00       	callq  4016f7 <read_six_numbers>
+  400fba:	83 3c 24 00          	cmpl   $0x0,(%rsp)
+  400fbe:	75 07                	jne    400fc7 <phase_2+0x1b>
+  400fc0:	83 7c 24 04 01       	cmpl   $0x1,0x4(%rsp)
+  400fc5:	74 21                	je     400fe8 <phase_2+0x3c>
+  400fc7:	e8 f5 06 00 00       	callq  4016c1 <explode_bomb>
+  400fcc:	eb 1a                	jmp    400fe8 <phase_2+0x3c>
+  400fce:	8b 43 f8             	mov    -0x8(%rbx),%eax
+  400fd1:	03 43 fc             	add    -0x4(%rbx),%eax
+  400fd4:	39 03                	cmp    %eax,(%rbx)
+  400fd6:	74 05                	je     400fdd <phase_2+0x31>
+  400fd8:	e8 e4 06 00 00       	callq  4016c1 <explode_bomb>
+  400fdd:	48 83 c3 04          	add    $0x4,%rbx
+  400fe1:	48 39 eb             	cmp    %rbp,%rbx
+  400fe4:	75 e8                	jne    400fce <phase_2+0x22>
+  400fe6:	eb 0c                	jmp    400ff4 <phase_2+0x48>
+  400fe8:	48 8d 5c 24 08       	lea    0x8(%rsp),%rbx
+  400fed:	48 8d 6c 24 18       	lea    0x18(%rsp),%rbp
+  400ff2:	eb da                	jmp    400fce <phase_2+0x22>
+  400ff4:	48 83 c4 28          	add    $0x28,%rsp
+  400ff8:	5b                   	pop    %rbx
+  400ff9:	5d                   	pop    %rbp
+  400ffa:	c3                   	retq
